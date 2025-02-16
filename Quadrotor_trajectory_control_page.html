@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadrotor Trajectory Control System</title>
+    <style>
+        body {
+            background: url('bg1.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            z-index: 10;
+        }
+        header { top: 0; }
+        footer { bottom: 0;}
+        
+        nav a {
+            color: #D3D3D3;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 90vw;
+            margin: 120px auto 60px;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            width: fit-content;
+            margin: 0 auto;
+            margin-left: 0%;
+            margin-bottom: 3%;
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            width: 100%;
+            gap: 3%;
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 85vw;
+            gap: 3%;
+        }
+
+        .first-image img {
+            width: 45%;
+            max-width: 600px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 5px;
+            flex: none;
+        }
+
+        .section img {
+            width: 40%;
+            height: auto;
+            max-width: 500px;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+
+        .text-container {
+            width: 55%;
+            text-align: justify;
+        }
+
+        .text-container h2 {
+            margin-top: 0;
+        }
+
+        .reverse .content-wrapper {
+            flex-direction: row-reverse;
+        }
+
+        .skills-section {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 10px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .skill-box {
+            background: #444;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: white;
+        }
+
+        @media (max-width: 1024px) {
+            .content-wrapper {
+                flex-wrap: wrap;
+                max-width: 95vw;
+                gap: 3%;
+            }
+            .section img {
+                max-width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                text-align: center;
+                margin-left: 0;
+            }
+            .content-wrapper {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 15px;
+            }
+            .first-image img {
+                width: 70%;
+                max-width: 400px;
+            }
+            .section img {
+                max-width: 60%;
+            }
+            .text-container {
+                width: 90%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<script>
+    window.addEventListener("scroll", function() {
+        document.querySelector("footer").style.display = "block";
+    });
+</script>
+
+<body>
+    <header>
+        <nav>
+            <a href="About_page.html">About</a>
+            <a href="Projects_Page.html">Projects</a>
+            <a href="Resume_page.html">Resume</a>
+            <a href="Contact_page.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Quadrotor Trajectory Control System</h1>
+
+        <div class="section first-image">
+            <div class="content-wrapper">
+                <img src="Simulink_image.png" alt="Quadrotor Simulink Model">
+                <div class="text-container">
+                    <h2>Project Overview</h2>
+                    <p>
+                        Designed a <strong>PID and Model Predictive Control (MPC) based trajectory control system</strong> for a quadrotor drone, enhancing
+                        <strong>trajectory tracking under wind disturbances</strong>. Using MATLAB Simulink, this approach achieved a <strong>40% improvement</strong>
+                        in stability metrics.
+                    </p>
+                    <p>
+                        The quadrotor simulation model incorporates <strong>realistic wind gust effects</strong>, sensor noise, and system dynamics.
+                        Our control strategy utilizes <strong>adaptive gains</strong> to dynamically adjust response time based on flight conditions.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section reverse">
+            <div class="content-wrapper">
+                <img src="quadrotor_simulation_simulation.png" alt="Control System Output">
+                <div class="text-container">
+                    <h2>Control System & Results</h2>
+                    <p>
+                        Our control system consists of a <strong>dual-loop PID architecture</strong>, where an <strong>outer loop</strong> handles position control and an
+                        <strong>inner loop</strong> manages attitude stabilization. <strong>Model Predictive Control (MPC)</strong> further enhances adaptability by predicting
+                        future trajectory deviations and adjusting control inputs accordingly.
+                    </p>
+                    <p>
+                        Simulated results demonstrate effective stabilization under wind disturbances, with significant improvements in tracking accuracy.
+                        The controller was tested across multiple trajectory profiles, showcasing real-time corrections and optimized thrust allocation.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    <footer>
+        <p>&copy; 2025 Sudharshan Ramesh | <a href="mailto:sudharshan.ramesh@colorado.edu" style="color:#D3D3D3; text-decoration:none;">sudharshan.ramesh@colorado.edu</a></p>
+    </footer>
+</body>
+</html>

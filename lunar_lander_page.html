@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunar Lander Reinforcement Learning</title>
+    <style>
+        body {
+            background: url('bg1.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            z-index: 10;
+        }
+        
+        header { top: 0; }
+        footer { bottom: 0;} /* Initially hidden, appears on scroll */
+
+        nav a {
+            color: #D3D3D3;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 90vw;
+            margin: 120px auto 60px;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            width: fit-content;
+            margin: 0 auto;
+            margin-left: 0%;
+            margin-bottom: 3%;
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            width: 100%;
+            gap: 3%;
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 85vw;
+            gap: 3%;
+        }
+
+        .first-image img {
+            width: 45%;
+            max-width: 600px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 5px;
+            flex: none;
+        }
+
+        .section img {
+            width: 40%;
+            height: auto;
+            max-width: 500px;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+
+        .text-container {
+            width: 55%;
+            text-align: justify;
+        }
+
+        .text-container h2 {
+            margin-top: 0;
+        }
+
+        .reverse .content-wrapper {
+            flex-direction: row-reverse;
+        }
+
+        .download-btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .download-btn a {
+            background: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 2px solid white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 1024px) {
+            .content-wrapper {
+                flex-wrap: wrap;
+                max-width: 95vw;
+                gap: 3%;
+            }
+            .section img {
+                max-width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                text-align: center;
+                margin-left: 0;
+            }
+            .content-wrapper {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 15px;
+            }
+            .first-image img {
+                width: 70%;
+                max-width: 400px;
+            }
+            .section img {
+                max-width: 60%;
+            }
+            .text-container {
+                width: 90%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<script>
+    window.addEventListener("scroll", function() {
+        document.querySelector("footer").style.display = "block";
+    });
+</script>
+<body>
+    <header>
+        <nav>
+            <a href="About_page.html">About</a>
+            <a href="Projects_Page.html">Projects</a>
+            <a href="Resume_page.html">Resume</a>
+            <a href="Contact_page.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Lunar Lander Reinforcement Learning</h1>
+
+        <div class="section first-image">
+            <div class="content-wrapper">
+                <img src="lunar_lander_block_diagram.png" alt="Lunar Lander Framework">
+                <div class="text-container">
+                    <h2>Project Overview & Model Architecture</h2>
+                    <p>
+                        Developed a <b>Deep Q-Network (DQN)</b> based reinforcement learning model for solving the <b>Lunar Lander problem</b> in OpenAI Gym.
+                        The agent learns to <b>stabilize descent</b> while minimizing fuel consumption, balancing between <b>reward-driven learning</b> and 
+                        <b>policy optimization</b>.
+                    </p>
+                    <p>
+                        The <b>environment dynamics</b> include:
+                        <ul>
+                            <li>Gravity, wind, and turbulence effects.</li>
+                            <li>Thruster-based control for vertical and lateral movement.</li>
+                            <li>Reward system encouraging smooth landing and penalizing crashes.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="content-wrapper">
+                <div class="text-container">
+                    <h2>Results & Insights</h2>
+                    <p> - <b>Achieved stable landing</b> in <b>95% of test cases</b> after training.</p>
+                    <p> - <b>Fine-tuned hyperparameters</b> improved convergence by <b>40%</b>.</p>
+                    <p> - <b>Policy adaptation</b> under stochastic wind disturbances.</p>
+                    <p> - <b>Comparison:</b> Q-learning struggled with instability, whereas <b>DQN</b> successfully learned optimal landing strategies.</p>
+                </div>
+            </div>
+        </div>
+
+    <footer>
+        <p>&copy; 2025 Sudharshan Ramesh | <a href="mailto:sudharshan.ramesh@colorado.edu" style="color:#D3D3D3; text-decoration:none;">sudharshan.ramesh@colorado.edu</a></p>
+    </footer>
+</body>
+</html>

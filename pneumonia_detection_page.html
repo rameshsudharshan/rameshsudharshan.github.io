@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ensemble Deep Learning for Pneumonia Detection</title>
+    <style>
+        body {
+            background: url('bg1.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer{
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            z-index: 10;
+        }
+        header { top: 0; }
+        footer {
+            bottom: 0;
+        }
+
+        nav a {
+            color: #D3D3D3;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 90vw;
+            margin: 120px auto 60px;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            width: fit-content;
+            margin: 0 auto;
+            margin-left: 0%;
+            margin-bottom: 3%;
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            width: 100%;
+            gap: 3%;
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 85vw;
+            gap: 3%;
+        }
+
+        .first-image img {
+            width: 45%;
+            max-width: 600px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 5px;
+            flex: none;
+        }
+
+        .section img {
+            width: 40%;
+            height: auto;
+            max-width: 500px;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+
+        .text-container {
+            width: 55%;
+            text-align: justify;
+        }
+
+        .text-container h2 {
+            margin-top: 0;
+        }
+
+        .reverse .content-wrapper {
+            flex-direction: row-reverse;
+        }
+
+        .download-btn-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* Button Styling - Matches the Provided Image */
+        .download-btn {
+            background: black;
+            color: white;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid white;
+            display: inline-block;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .download-btn:hover {
+            background: white;
+            color: black;
+        }
+
+        @media (max-width: 1024px) {
+            .content-wrapper {
+                flex-wrap: wrap;
+                max-width: 95vw;
+                gap: 3%;
+            }
+            .section img {
+                max-width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                text-align: center;
+                margin-left: 0;
+            }
+            .content-wrapper {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 15px;
+            }
+            .first-image img {
+                width: 70%;
+                max-width: 400px;
+            }
+            .section img {
+                max-width: 60%;
+            }
+            .text-container {
+                width: 90%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<script>
+    window.addEventListener("scroll", function() {
+        document.querySelector("footer").style.display = "block";
+    });
+</script>
+<body>
+    <header>
+        <nav>
+            <a href="About_page.html">About</a>
+            <a href="Projects_Page.html">Projects</a>
+            <a href="Resume_page.html">Resume</a>
+            <a href="Contact_page.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Ensemble Deep Learning for Pneumonia Detection</h1>
+
+        <div class="section first-image">
+            <div class="content-wrapper">
+                <img src="ensemble_model_block_diagram.png" alt="Ensemble Model Block Diagram">
+                <div class="text-container">
+                    <h2>Project Overview</h2>
+                    <p>
+                        Developed an <strong>ensemble deep learning model</strong> for pneumonia detection, combining <strong>ResNet-18, DenseNet-121, and GoogLeNet</strong> with a 
+                        <strong>hyperbolic tangent-based weighting mechanism</strong> to enhance classification accuracy.
+                    </p>
+                    <p>
+                        This model leverages the <strong>RSNA Pneumonia Detection Challenge dataset</strong>, applying preprocessing steps like image normalization and augmentation
+                        to improve robustness against variations in X-ray scans.
+                    </p>
+
+                    <h2>Model Architecture & Results</h2>
+                    <p>
+                        Each CNN model in the ensemble independently processes input X-ray images, producing probability scores for pneumonia detection.
+                        These scores are then <strong>weighted using a hyperbolic tangent function</strong> based on key performance metrics (precision, recall, AUC-ROC).
+                    </p>
+                    <p>
+                        The final classification decision is derived from the weighted outputs, achieving a <b>6.3% increase in F1-score</b> and a <b>9.1% improvement in sensitivity</b>
+                        compared to the best-performing individual CNN model. The ensemble approach <b>enhanced overall classification accuracy by 5.7%</b>, particularly improving 
+                        detection performance on hard-to-classify cases in the dataset.
+                        </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Report Button -->
+        <div class="download-btn-container">
+            <a href="CS7643_Project.pdf" class="download-btn" download>Download Report</a>
+        </div>
+
+    <footer>
+        <p>&copy; 2025 Sudharshan Ramesh | <a href="mailto:sudharshan.ramesh@colorado.edu" style="color:#D3D3D3; text-decoration:none;">sudharshan.ramesh@colorado.edu</a></p>
+    </footer>
+</body>
+</html>

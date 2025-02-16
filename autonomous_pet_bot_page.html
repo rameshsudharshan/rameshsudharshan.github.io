@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Pet Bot</title>
+    <style>
+        body {
+            background: url('bg1.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            z-index: 10;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: relative;
+            left: 0;
+            z-index: 10;
+        }
+        header { top: 0; }
+        footer { bottom: 0;} /* Initially hidden, appears on scroll */
+        
+        nav a {
+            color: #D3D3D3;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 90vw;
+            margin: 120px auto 60px;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            width: fit-content;
+            margin: 0 auto;
+            margin-left: 0%;
+            margin-bottom: 3%;
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            width: 100%;
+            gap: 3%;
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 85vw;
+            gap: 3%;
+        }
+
+        .section img {
+            width: 40%;
+            height: auto;
+            max-width: 500px;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+
+        .text-container {
+            width: 55%;
+            text-align: justify;
+        }
+
+        .text-container h2 {
+            margin-top: 0;
+        }
+
+        .reverse .content-wrapper {
+            flex-direction: row-reverse;
+        }
+
+        .skills-section {
+            background: #2c2c2c;
+            padding: 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .skills-section h2 {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .skill {
+            background: #595959;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 1024px) {
+            .content-wrapper {
+                flex-wrap: wrap;
+                max-width: 95vw;
+                gap: 3%;
+            }
+            .section img {
+                max-width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                text-align: center;
+                margin-left: 0;
+            }
+            .content-wrapper {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 15px;
+            }
+            .section img {
+                max-width: 60%;
+            }
+            .text-container {
+                width: 90%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="About_page.html">About</a>
+            <a href="Projects_Page.html">Projects</a>
+            <a href="Resume_page.html">Resume</a>
+            <a href="Contact_page.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Autonomous Pet Bot</h1>
+
+        <div class="section">
+            <div class="content-wrapper">
+                <img src="Mech2_CAD_image.png" alt="Robotic Pet CAD Model">
+                <div class="text-container">
+                    <h2>Project Overview</h2>
+                    <p>
+                        Engineered a robotic pet with sensor-driven navigation, multi-actuator mobility, and ROS2-based integration.
+                        Utilizing LiDAR and Intel RealSense camera, the pet achieves enhanced SLAM-based localization,
+                        gesture recognition, and autonomous mapping.
+                    </p>
+                    <h2>Design Features</h2>
+                    <ul>
+                        <li><b>Wagging Tail:</b> 4-bar linkage mechanism</li>
+                        <li><b>Legs with Wheels:</b> Hybrid movement strategy</li>
+                        <li><b>Microphone & Speaker:</b> Speech recognition & response</li>
+                        <li><b>Camera Vision:</b> Real-time object tracking & recognition using YOLOv7</li>
+                        <li><b>IMU & Lidar Fusion:</b> High-frequency Kalman filtering for noise reduction</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section reverse">
+            <div class="content-wrapper">
+                <img src="ROS_graph.png" alt="ROS2 System Architecture">
+                <div class="text-container">
+                    <h2>ROS2 Integration & Sensor Fusion</h2>
+                    <p>
+                        The robotic pet uses a ROS2-based software stack for real-time control.  
+                        A high-frequency Kalman Filter fuses data from:
+                    </p>
+                    <ul>
+                        <li>LiDAR - Distance tracking</li>
+                        <li>RealSense Camera - Object & face detection</li>
+                        <li>IMU - Motion & balance correction</li>
+                    </ul>
+                    <p>
+                        ROS2 Nav2 package is implemented for path planning and localization, 
+                        allowing the pet to navigate autonomously in dynamic environments.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    <footer>
+        <p>&copy; 2025 Sudharshan Ramesh | <a href="mailto:sudharshan.ramesh@colorado.edu" style="color:#D3D3D3; text-decoration:none;">sudharshan.ramesh@colorado.edu</a></p>
+    </footer>
+</body>
+</html>

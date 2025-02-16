@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT-Based Constant Speed Propeller System</title>
+    <style>
+        body {
+            background: url('bg1.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            z-index: 10;
+        }
+        header { top: 0; }
+        footer {
+            bottom: 0;
+        }
+
+        nav a {
+            color: #D3D3D3;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 90vw;
+            margin: 120px auto 60px;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            width: fit-content;
+            margin: 0 auto;
+            margin-left: 0%;
+            margin-bottom: 3%;
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            gap: 3%;
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 85vw;
+            gap: 3%;
+        }
+
+        .section img {
+            width: 40%;
+            height: auto;
+            max-width: 500px;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+
+        .text-container {
+            width: 55%;
+            text-align: justify;
+        }
+
+        .text-container h2 {
+            margin-top: 0;
+        }
+
+        .reverse .content-wrapper {
+            flex-direction: row-reverse;
+        }
+
+        .download-btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .download-btn a {
+            background: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 2px solid white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 1024px) {
+            .content-wrapper {
+                flex-wrap: wrap;
+                max-width: 95vw;
+                gap: 3%;
+            }
+            .section img {
+                max-width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                text-align: center;
+                margin-left: 0;
+            }
+            .content-wrapper {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 15px;
+            }
+            .section img {
+                max-width: 60%;
+            }
+            .text-container {
+                width: 90%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<script>
+    window.addEventListener("scroll", function() {
+        document.querySelector("footer").style.display = "block";
+    });
+</script>
+<body>
+    <header>
+        <nav>
+            <a href="About_page.html">About</a>
+            <a href="Projects_Page.html">Projects</a>
+            <a href="Resume_page.html">Resume</a>
+            <a href="Contact_page.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>IoT-Based Constant Speed Propeller System</h1>
+
+        <div class="section">
+            <div class="content-wrapper">
+                <img src="IOT_PID_circuit_diagram.png" alt="Circuit Diagram">
+                <div class="text-container">
+                    <h2>Project Overview</h2>
+                    <p>
+                        This IoT-based constant speed propeller system leverages <b>real-time RPM monitoring and motor control</b>.
+                        The system ensures stable propeller speed despite varying load conditions by implementing closed-loop control.
+                    </p>
+                    <p>
+                        The system integrates:
+                        <p>- Arduino UNO WiFi REV2 microcontroller for wireless connectivity.</p>
+                        <p>- RPM sensor for real-time speed feedback.</p>
+                        <p>- PID control loop for maintaining desired speed.</p>
+                        <p>- MQTT communication for remote control and monitoring.</p>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section reverse">
+            <div class="content-wrapper">
+                <img src="IOT_PID_response_curve.png" alt="System Performance Graph">
+                <div class="text-container">
+                    <h2>Performance Results</h2>
+                    <p>
+                        The system effectively maintains the set RPM, adapting to external disturbances.
+                        <p>- Fast response time for speed adjustments.</p>
+                        <p>- Minimal overshoot during transient changes.</p>
+                        <p>- Stable steady-state RPM within a <b>2% error margin</b>.</p>
+                    </p>
+                    <p>
+                        The graph shows motor speed variations over time, highlighting the effectiveness of the control system.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sudharshan Ramesh | <a href="mailto:sudharshan.ramesh@colorado.edu" style="color:#D3D3D3; text-decoration:none;">sudharshan.ramesh@colorado.edu</a></p>
+    </footer>
+</body>
+</html>

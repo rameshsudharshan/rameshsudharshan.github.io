@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Battle Bot</title>
+    <style>
+        body {
+            background: url('bg1.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            z-index: 10;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: relative;  /* Change from fixed to relative */
+            bottom: 0;
+            margin-top: 50px; /* Adds spacing before footer appears */
+        }
+        header { top: 0; }
+        footer { bottom: 0; }
+        
+        nav a {
+            color: #D3D3D3;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 90vw;
+            margin: 120px auto 60px;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            width: fit-content;
+            margin: 0 auto;
+            margin-left: 0%;
+            margin-bottom: 3%;
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            width: 100%;
+            gap: 3%;
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 85vw;
+            gap: 3%;
+        }
+
+        /* First image section can be adjusted separately */
+        .first-image img {
+            width: 10%;  /* Adjustable size */
+            max-width: 500px;  /* Limits it from becoming too large */
+            height: auto;
+            object-fit: contain;
+            border-radius: 5px;
+            flex: none;
+        }
+
+        .section img {
+            width: 40%;
+            height: auto;
+            max-width: 500px; /* Adjust dynamically */
+            object-fit: contain;
+            border-radius: 5px;
+        }
+
+        .text-container {
+            width: 55%;
+            text-align: justify;
+        }
+
+        .text-container h2 {
+            margin-top: 0;
+        }
+
+        .reverse .content-wrapper {
+            flex-direction: row-reverse;
+        }
+
+        @media (max-width: 1024px) {
+            .content-wrapper {
+                flex-wrap: wrap;
+                max-width: 95vw;
+                gap: 3%;
+            }
+            .section img {
+                max-width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                text-align: center;
+                margin-left: 0;
+            }
+            .content-wrapper {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 15px;
+            }
+            .first-image img {
+                width: 70%;
+                max-width: 400px;
+            }
+            .section img {
+                max-width: 60%;
+            }
+            .text-container {
+                width: 90%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="About_page.html">About</a>
+            <a href="Projects_Page.html">Projects</a>
+            <a href="Resume_page.html">Resume</a>
+            <a href="Contact_page.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Autonomous Battle Bot</h1>
+
+        <div class="section first-image">
+            <div class="content-wrapper">
+                <img src="CAD_design_exploded.png" alt="Exploded CAD Model">
+                <div class="text-container">
+                    <h2>Project Overview</h2>
+                    <p>
+                        The Autonomous Ball Shooter Robot was developed to demonstrate real-time motion control 
+                        and robotic actuation. It integrates computer vision and mechanical 
+                        design to achieve a fully automated shooting mechanism.
+                    </p>
+                    <p> </p>
+                    <p> </p>
+                    <h2>Project Design</h2>
+                    <p>
+                        The system was designed using modular engineering principles, allowing for easy assembly, 
+                        disassembly, and future upgrades. The structure consists of a motorized base equipped with 
+                        Mecanum wheels, enabling omnidirectional movement for precise positioning.
+                    </p>
+                    <p>
+                        A robust sensor mounting system ensures reliable integration of vision sensors
+                        and IR sensors for real-time environmental awareness. The shooting mechanism is driven 
+                        by high-speed motors and a precision indexing system, which allows for consistent and 
+                        accurate ball firing.
+                    </p>
+                    <p>
+                        The automated reloading mechanism features a vertical ball silo that feeds the shooter via 
+                        a controlled release system, ensuring a seamless operation without manual intervention. 
+                        Designed with 3D-printed parts, the robot is both lightweight and structurally rigid, 
+                        providing a balance between speed and durability.
+                    </p>
+                    <p>
+                        The electronics and control system are housed in a dedicated compartment to protect against 
+                        external interference, ensuring smooth data processing and power distribution. By adopting a 
+                        modular framework, this robot allows for easy troubleshooting, maintenance, and potential 
+                        expansions in functionality.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section reverse">
+            <div class="content-wrapper">
+                <img src="Circuit_schematic.png" alt="Electronics and Circuit Design">
+                <div class="text-container">
+                    <h2>Electronics and Circuit Design</h2>
+                    <p>
+                        The electronic system is powered by an Arduino Mega, chosen for its high number of I/O pins 
+                        and efficient processing capability. It serves as the central controller, managing motor actuation, 
+                        sensor data acquisition, and communication between various subsystems.
+                    </p>
+                    <p>
+                        To ensure precise motion control, the Arduino interfaces with motor drivers that regulate 
+                        the power delivered to the Mecanum wheels. These drivers optimize speed and torque while preventing 
+                        current spikes that could damage the circuit.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="content-wrapper">
+                <img src="reloading_silo_design.png" alt="Ball Reloading Mechanism">
+                <div class="text-container">
+                    <h2>Ball Reloading Mechanism</h2>
+                    <p>
+                        The reloading system features a vertical silo that holds multiple balls, ensuring a continuous 
+                        supply to the shooter. A sliding release mechanism at the base allows controlled ball delivery.
+                    </p>
+                    <p>
+                        When activated, the sliding gate moves, briefly opening a passage for a single ball to roll into 
+                        the shooter before closing again. This mechanism prevents multiple balls from entering at once and 
+                        ensures smooth operation.
+                    </p>
+                    <p>
+                        The silo is designed with smooth internal surfaces to prevent jams and ensure balls roll down freely. 
+                        By automating this process, the system enables **continuous shooting** without manual intervention.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Sudharshan Ramesh | <a href="mailto:sudharshan.ramesh@colorado.edu" style="color:#D3D3D3; text-decoration:none;">sudharshan.ramesh@colorado.edu</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Testing with UR5 Robot</title>
+    <style>
+        body {
+            background: url('bg1.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            z-index: 10;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: relative;
+            left: 0;
+            z-index: 10;
+        }
+        header { top: 0; }
+        footer { bottom: 0;} /* Appears on scroll */
+
+        nav a {
+            color: #D3D3D3;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 90vw;
+            margin: 120px auto 60px;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            width: fit-content;
+            margin: 0 auto;
+            margin-left: 0%;
+            margin-bottom: 3%;
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            gap: 3%;
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 85vw;
+            gap: 3%;
+        }
+
+        .text-container {
+            width: 55%;
+            text-align: justify;
+        }
+
+        .text-container h2 {
+            margin-top: 0;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            width: 40%;
+        }
+
+        .video-container video {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .reverse .content-wrapper {
+            flex-direction: row-reverse;
+        }
+
+        .download-btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .download-btn a {
+            background: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 2px solid white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 1024px) {
+            .content-wrapper {
+                flex-wrap: wrap;
+                max-width: 95vw;
+                gap: 3%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                text-align: center;
+                margin-left: 0;
+            }
+            .content-wrapper {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 15px;
+            }
+            .video-container {
+                width: 60%;
+            }
+            .text-container {
+                width: 90%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<script>
+    window.addEventListener("scroll", function() {
+        document.querySelector("footer").style.display = "block";
+    });
+</script>
+<body>
+    <header>
+        <nav>
+            <a href="About_page.html">About</a>
+            <a href="Projects_Page.html">Projects</a>
+            <a href="Resume_page.html">Resume</a>
+            <a href="Contact_page.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Automated Testing with UR5 Robot</h1>
+
+        <div class="section">
+            <div class="content-wrapper">
+                <div class="text-container">
+                    <h2>Project Overview</h2>
+                    <p>
+                        Developed an <b>automated testing system</b> for evaluating <b>pneumatic actuator performance</b> using a <b>6-axis UR5 robotic arm</b>.
+                        The robotic system utilizes <b>inverse kinematics</b> to position the load cell at precise locations to measure force at different actuator positions.
+                    </p>
+                    <p>
+                        The testing process is fully <b>automated</b>, eliminating manual errors and ensuring consistent force measurements across multiple tests.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section reverse">
+            <div class="content-wrapper">
+                <div class="text-container">
+                    <h2>Inverse Kinematics Implementation</h2>
+                    <p>
+                        The UR5 arm's motion is controlled through <b>inverse kinematics algorithms</b>, ensuring precise end-effector positioning.
+                        The trajectory is optimized to maximize the accuracy of force measurements while minimizing unnecessary movement.
+                    </p>
+                    <p>Here is a demo of a part, how the Inverse Kinematics works</p>
+                </div>
+                <div class="video-container">
+                    <video controls>
+                        <source src="UR5_inverse_kinematics_Demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="content-wrapper">
+                <div class="text-container">
+                    <h2>Performance Results</h2>
+                    <p>
+                        The automated system successfully:
+                    </p>
+                    <ul>
+                        <li>Reduced test time by <b>40%</b> compared to manual measurements.</li>
+                        <li>Achieved force measurement accuracy within <b>±1% error</b>.</li>
+                        <li>Optimized end-effector positioning using real-time <b>feedback control</b>.</li>
+                        <li>Validated results through repeated testing cycles, ensuring <b>consistency</b>.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sudharshan Ramesh | 
+            <a href="mailto:sudharshan.ramesh@colorado.edu" style="color:#D3D3D3; text-decoration:none;">
+                sudharshan.ramesh@colorado.edu
+            </a>
+        </p>
+    </footer>
+</body>
+</html>

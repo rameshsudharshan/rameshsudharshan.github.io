@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAE Efficycle - Hybrid Electric & Human Powered Vehicle</title>
+    <style>
+        body {
+            background: url('bg1.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            z-index: 10;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: relative;
+            left: 0;
+            z-index: 10;
+        }
+        header { top: 0; }
+        footer { bottom: 0; display: none; } /* Appears on scroll */
+
+        nav a {
+            color: #D3D3D3;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 90vw;
+            margin: 120px auto 60px;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            width: fit-content;
+            margin: 0 auto;
+            margin-left: 0%;
+            margin-bottom: 3%;
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            gap: 3%;
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 85vw;
+            gap: 3%;
+        }
+
+        .section img {
+            width: 40%;
+            height: auto;
+            max-width: 500px;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+
+        .text-container {
+            width: 55%;
+            text-align: justify;
+        }
+
+        .text-container h2 {
+            margin-top: 0;
+        }
+
+        .reverse .content-wrapper {
+            flex-direction: row-reverse;
+        }
+
+        .download-btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .download-btn a {
+            background: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 2px solid white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 1024px) {
+            .content-wrapper {
+                flex-wrap: wrap;
+                max-width: 95vw;
+                gap: 3%;
+            }
+            .section img {
+                max-width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                text-align: center;
+                margin-left: 0;
+            }
+            .content-wrapper {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 15px;
+            }
+            .section img {
+                max-width: 60%;
+            }
+            .text-container {
+                width: 90%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<script>
+    window.addEventListener("scroll", function() {
+        document.querySelector("footer").style.display = "block";
+    });
+</script>
+<body>
+    <header>
+        <nav>
+            <a href="About_page.html">About</a>
+            <a href="Projects_Page.html">Projects</a>
+            <a href="Resume_page.html">Resume</a>
+            <a href="Contact_page.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>SAE Efficycle</h1>
+
+        <div class="section">
+            <div class="content-wrapper">
+                <img src="Efficycle_CAD_model.png" alt="Efficycle CAD Model">
+                <div class="text-container">
+                    <h2>Project Overview</h2>
+                    <p>
+                        Designed and manufactured an Efficycle as part of a team of 8, a hybrid electric + human-powered three-wheeled vehicle. 
+                        The project involved <b>mechanical design, structural analysis, and powertrain optimization</b> to achieve
+                        high efficiency and performance.
+                    </p>
+                    <p>
+                        Key features include:
+                        <ul>
+                            <li>Hybrid drive system combining electric and manual pedaling.</li>
+                            <li>Lightweight tubular chassis for optimized strength-to-weight ratio.</li>
+                            <li>Regenerative braking system for energy recovery.</li>
+                            <li>Optimized aerodynamics for minimal drag.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section reverse">
+            <div class="content-wrapper">
+                <img src="Efficycle_frontal_impact_analysis.png" alt="Frontal Impact Analysis">
+                <div class="text-container">
+                    <h2>Structural Analysis - Frontal Impact</h2>
+                    <p> - <b>Weight of trike</b>: 250 kg   </p>
+                    <p> - <b>Speed before collision:</b> 9 m/s </p>     
+                    <p> - The simulation revealed high-stress areas, allowing reinforcement for safety.</p>    
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="content-wrapper">
+                <img src="Efficycle_side_impact_analysis.png" alt="Side Impact Analysis">
+                <div class="text-container">
+                    <h2>Structural Analysis - Side Impact</h2>
+                    <p> - The same conditions were applied as frontal impact.</p>  
+                    <p> - The structure effectively absorbs lateral forces, ensuring minimal deformation.</p>    
+                </div>
+            </div>
+        </div>
+
+        <div class="section reverse">
+            <div class="content-wrapper">
+                <img src="Efficycle_rollover_impact_analysis.png" alt="Rollover Analysis">
+                <div class="text-container">
+                    <h2>Structural Analysis - Rollover</h2>
+                    <p> - The top frame was tested for rollover durability.</p>
+                    <p> - Impact force applied to top members while one side was fixed.</p>  
+                    <p> - The structure remained stable under simulated roll conditions.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="content-wrapper">
+                <img src="brake_disc_deformation_analysis.png" alt="Brake Deformation Analysis">
+                <div class="text-container">
+                    <h2>Brake Deformation Analysis</h2>
+                    <p> - <b>Maximum applied force</b>: 50N </p>
+                    <p> - The brake rotor exhibited minimal deformation under braking force.</p>    
+                </div>
+            </div>
+        </div>
+
+        <div class="section reverse">
+            <div class="content-wrapper">
+                <img src="Efficycle_steering_model.png" alt="Steering Mechanism">
+                <div class="text-container">
+                    <h2>Steering Mechanism</h2>
+                    <p> - <b>Steering ratio:</b> 0.8</p> 
+                    <p> - <b>Turning radius:</b> 1.87 m</p>     
+                    <p> - <b>Track width:</b> 43 inches</p>      
+                    <p> - <b>Wheelbase:</b>  39 inches</p>      
+                    </p>
+                    <p>
+                        The steering mechanism ensures a tight turning radius while maintaining stability.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sudharshan Ramesh | <a href="mailto:sudharshan.ramesh@colorado.edu" style="color:#D3D3D3; text-decoration:none;">sudharshan.ramesh@colorado.edu</a></p>
+    </footer>
+</body>
+</html>

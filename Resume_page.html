@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudharshan's Resume</title>
+    <style>
+        body {
+            background: url('bg1.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0); /* Dim background */
+            z-index: -1;
+        }
+        
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            left: 0;
+            z-index: 10;
+            top: 0;
+        }
+        nav a {
+            color: #D3D3D3;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .resume-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+            padding-bottom: 80px; /* Ensure space for button */
+        }
+        .resume-image {
+            width: 80%;
+            max-width: 1300px;
+            border-radius: 10px;
+            border: 2px solid #D3D3D3;
+        }
+        .download-btn {
+            margin-bottom: 20px;
+            padding: 15px 25px;
+            font-size: 18px;
+            color: white;
+            background-color: black;
+            border: 2px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            position: relative;
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        .download-btn:hover {
+            background-color: #333;
+            box-shadow: 3px 3px 7px rgba(255, 255, 255, 0.5);
+        }
+        
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: relative;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="About_page.html">About</a>
+            <a href="Projects_Page.html">Projects</a>
+            <a href="Resume_page.html">Resume</a>
+            <a href="Contact_page.html">Contact</a>
+        </nav>
+    </header>
+    
+    <div class="resume-container">
+        <a href="Sudharshan_robotics_resume_1.pdf" download="Sudharshan_Ramesh_Resume.pdf" class="download-btn">Download Resume</a>
+        <img class="resume-image" src="Resume.jpg" alt="Resume Image">
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Sudharshan Ramesh | 
+            <a href="mailto:sudharshan.ramesh@colorado.edu" style="color:#D3D3D3; text-decoration:none;">
+                sudharshan.ramesh@colorado.edu
+            </a>
+        </p>
+    </footer>
+</body>
+</html>

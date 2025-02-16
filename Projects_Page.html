@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudharshan's Projects</title>
+    <style>
+        body {
+            background: url('bg1.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            z-index: -1;
+        }
+
+        header, footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: relative;
+            left: 0;
+            z-index: 10;
+        }
+        header {
+            top: 0;
+        }
+        footer {
+            bottom: 0;
+        }
+        nav a {
+            color: #D3D3D3;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+            padding: 20px 50px 60px;
+        }
+
+        .project-item {
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .project-item:first-child {
+            grid-row: span 2;
+            grid-column: span 1;
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            opacity: 0;
+            transition: background 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        .project-item:hover img {
+            transform: scale(1.05);
+            filter: brightness(0.5);
+        }
+
+        .project-item:hover .project-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="About_page.html">About</a>
+            <a href="Projects_Page.html">Projects</a>
+            <a href="Resume_page.html">Resume</a>
+            <a href="Contact_page.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Projects</h1>
+    </div>
+
+    <div class="projects-container">
+        <div class="project-item" onclick="location.href='autonomous_battle_bot_page.html';">
+            <img src="Mech1_project_actual.png" alt="Project 1">
+            <div class="project-overlay">Autonomous Battle Bot</div>
+        </div>
+        <div class="project-item" onclick="location.href='autonomous_pet_bot_page.html';">
+            <img src="Mech2_project_actual.png" alt="Project 2">
+            <div class="project-overlay">Autonomous Pet Bot</div>
+        </div>
+        <div class="project-item" onclick="location.href='Quadrotor_trajectory_control_page.html';">
+            <img src="quadrotor_simulation_simulation.png" alt="Project 3">
+            <div class="project-overlay">Quadrotor Trajectory Control</div>
+        </div>
+        <div class="project-item" onclick="location.href='Efficycle_page.html';">
+            <img src="SAE_efficycle_actual.png" alt="Project 4">
+            <div class="project-overlay">SAE Efficycle</div>
+        </div>
+        <div class="project-item" onclick="location.href='IOT_PID_Control_page.html';">
+            <img src="IOT_PID_Project_actual.jpg" alt="Project 5">
+            <div class="project-overlay">IoT-Based Constant Speed Propeller System</div>
+        </div>
+        <div class="project-item" onclick="location.href='Warehouse_navigation_page.html';">
+            <img src="Warehouse_robot_image.png" alt="Project 6">
+            <div class="project-overlay">Autonomous Warehouse Navigation using Reinforcement Learning</div>
+        </div>
+        <div class="project-item" onclick="location.href='lunar_lander_page.html';">
+            <img src="lunar_lander_gif.gif" alt="Project 7">
+            <div class="project-overlay">Autonomous Lunar Lander using Reinforcement Learning</div>
+        </div>
+        <div class="project-item" onclick="location.href='UR5_robotic_arm_manipulation_page.html';">
+            <img src="UR5_robotic_arm.png" alt="Project 8">
+            <div class="project-overlay">UR5 Robotic arm manipulation</div>
+        </div>
+        
+        <div class="project-item" onclick="location.href='Pneumonia_detection_page.html';">
+            <img src="Pneumonia_detection_image.jpg" alt="Project 9">
+            <div class="project-overlay">Pneumonia Detection with Ensemble Deep Learning Models</div>
+        </div>
+        <div class="project-item" onclick="location.href='Stair_Traversing_Dolly_page.html';">
+            <img src="APD_actual.png" alt="Project 10">
+            <div class="project-overlay">Stair Traversing Dolly</div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sudharshan Ramesh | <a href="mailto:sudharshan.ramesh@colorado.edu" style="color:#D3D3D3; text-decoration:none;">sudharshan.ramesh@colorado.edu</a></p>
+    </footer>
+</body>
+</html>
